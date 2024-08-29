@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Control de Asistencias</title>
+    <title>Control de Asistencias</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <h1>Registro de Asistencias</h1>
         <div id="datetime"></div>
-        <button id="adminBtn">Acceso Administrador</button>
+        <button id="adminBtn"><i class="fas fa-user"></i></button>
         
         <div class="main-content">
-            <div class="attendance-methods">
+            <div class="metodos">
                 <div id="faceAndQrReader">
                     <h2>Reconocimiento Facial y Lector QR</h2>
                     <video id="video" width="400" height="300" autoplay></video>
@@ -38,7 +39,7 @@
     <div id="adminModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>Acceso Administrador</h2>
+            <h2><center>Acceso Administrador</center></h2>
             <input type="text" id="adminUsername" placeholder="Nombre de usuario">
             <input type="password" id="adminPassword" placeholder="Contraseña">
             <button id="adminLogin">Iniciar Sesión</button>
