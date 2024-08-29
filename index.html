@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Control de Asistencias</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Asistencias</h1>
+        <div id="datetime"></div>
+        <button id="adminBtn">Acceso Administrador</button>
+        
+        <div class="main-content">
+            <div class="attendance-methods">
+                <div id="faceAndQrReader">
+                    <h2>Reconocimiento Facial y Lector QR</h2>
+                    <video id="video" width="400" height="300" autoplay></video>
+                    <button id="captureBtn">Capturar</button>
+                </div>
+                <div id="employeeNumber">
+                    <input type="text" id="empNumber" placeholder="Ingrese número de empleado">
+                    <button id="submitEmpNumber">Enviar</button>
+                </div>
+            </div>
+            
+            <div class="employee-card">
+                <h2>Tarjeta de Identificación</h2>
+                <p id="empName">Nombre Completo: </p>
+                <p id="empPosition">Cargo: </p>
+                <p id="empCode">Código Numérico: </p>
+                <div id="empQRCode"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Acceso Administrador</h2>
+            <input type="text" id="adminUsername" placeholder="Nombre de usuario">
+            <input type="password" id="adminPassword" placeholder="Contraseña">
+            <button id="adminLogin">Iniciar Sesión</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://unpkg.com/@zxing/library@latest"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
